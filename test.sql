@@ -11,7 +11,7 @@ CREATE TABLE S3data.test1.exercise1 (
     customer_id INT
 );
 
-Insert data into the table
+-- Insert data into the table
 INSERT INTO S3data.test1.exercise1 (order_id, order_country_code, order_city_code, order_created_at, total_cost_eur, customer_id)
 VALUES
     (873321, 'KE', 'NBO', TIMESTAMP '2023-09-24 16:07:16', 22.5, 473321),
@@ -223,7 +223,7 @@ LEFT JOIN
 
 -- EXERCISE3
 
--- Created a CTE to calculate new customers numbers acquired each month
+-- Created a CTE to calculate new customer numbers acquired each month
 WITH monthly_new_customers AS (
     SELECT 
         DATE_TRUNC('month', c.account_created_at) AS month,
